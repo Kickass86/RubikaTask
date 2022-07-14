@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Rubika Task</string>
+    <string name="like_count">Liked by %d people</string>
+    <string name="comment_count">%d Comments</string>
+    <string name="caption">caption</string>
+</resources>
