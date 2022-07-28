@@ -11,14 +11,14 @@ import java.util.*
     tableName = "comment",
     foreignKeys = [ForeignKey(entity = PostEntity::class,
         parentColumns = arrayOf("id"),
-        childColumns = arrayOf("id"),
-        onDelete = ForeignKey.NO_ACTION)]
+        childColumns = arrayOf("post_id"),
+        onDelete = ForeignKey.CASCADE)]
 )
 data class CommentEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Long,
+    val id: Int,
     val content: String,
-    val time: Date,
+    val time: String,
     val name: String,
-    @ColumnInfo(name = "post_id") val postId: Long
+    @ColumnInfo(name = "post_id") val postId: Int
 )

@@ -8,13 +8,13 @@ import java.util.*
 @Entity(tableName = "post")
 data class PostEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Long,
-    val content: String,
-    val name: String,
-    val time: Date,
-    val picture: String,
-    val viewCount: Int,
+    val id: Int,
     val caption: String,
-    @ColumnInfo(name = "like_count") val likeCount: Int
+    val name: String,
+    val time: String,
+    val picture: String,
+    @ColumnInfo(name = "is_liked") var isLiked: Boolean = false,
+    @ColumnInfo(name = "view_count") val viewCount: Int,
+    @ColumnInfo(name = "like_count") var likeCount: Int
 
 )
